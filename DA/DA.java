@@ -59,7 +59,7 @@ public class DA {
         int counter = 2;
         //print out the message using a while loop
         while(save <= count){
-            if(save + counter <= count && save != 300){
+            if(save + counter <= count && save != count){
                 System.out.print(codes.get(save) + " " );
             }
             else{
@@ -75,10 +75,10 @@ public class DA {
     public static void main(String[] args) {
         //save file
         String txt = "coding_qual_input.txt";
+        //save the number of lines in the file
+        int count = numLines(txt);
         //save map
         Map<Integer, String> codeWords = decode(txt);
-        //save number of lines in file
-        int count = numLines(txt);
         translate(codeWords, count);
     }
 }
